@@ -6,18 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./assets/css/Normalize.css" rel="stylesheet" />
     <link href="./assets/css/main.css" rel="stylesheet" />
-    <link href="./assets/css/light_theme.css" id="theme-link" rel="stylesheet" />
+
     <title>Переключатель тем</title>
   </head>
   <body class="container">
     <form class="container-form">
-      <label class="container-form__label">Выберите тему:</label>
-      <select class="container-form__list" id="theme">
-        <option value="light_theme">Светалая</option>
-        <option value="dark_theme">Темная</option>
-      </select>
+      <h3 class="container-form__title">Регистрация</h3>
+      <div class="container-form-field">
+        <label class="container-form-field__label">Имя</label>
+        <input class="container-form-field__firstname" type="text" />
+      </div>
+      <div class="container-form-field">
+        <label class="container-form-field__label">Фамилия</label>
+        <input class="container-form-field__lasttname" type="text" />
+      </div>
+      <div class="container-form-field">
+        <label class="container-form-field__label">Придумайте логин</label>
+        <input class="container-form-field__login" type="text" />
+      </div>
+      <div class="container-form-field">
+        <label class="container-form-field__label">Придумайте пароль</label>
+        <input class="container-form-field__passwordfirst" type="password" />
+      </div>
+      <div class="container-form-field">
+        <label class="container-form-field__label">Повторите пароль</label>
+        <input class="container-form-field__passwordsecond" type="password" />
+      </div>
+      <div class="container-form-field">
+        <label class="container-form-field__label"
+          >Номер мобильного телефона</label
+        >
+        <input class="container-form-field__login" type="text" />
+      </div>
+      <button class="container-form__registration">Зарегистироваться</button>
+      <div class="container-form-agreement">
+        <p class="container-form-agreement__text">
+          Нажимая кнопку «Зарегистрироваться»:
+        </p>
+        <div class="container-form-agreement-item">
+          <input
+            class="container-form-agreement-item__chexbox"
+            type="checkbox"
+          />
+          <label class="container-form-agreement-item__text"
+            >Я принимаю условия <a>Пользовательского соглашения</a> и даю своё согласие
+            Яндексу на обработку моей персональной информации на условиях,
+            определенных <a>Политикой конфиденциальности.</a></label
+          >
+        </div>
+        <div class="container-form-agreement-item">
+          <input
+            class="container-form-agreement-item__chexbox"
+            type="checkbox"
+          />
+          <label class="container-form-agreement-item__text"
+            >Я не хочу получать рекламу и другие предложения данного сервиса Яндекса</label
+          >
+        </div>
+      </div>
     </form>
-    <h1>Это мой веб-сайт</h1>
 
     <script src="./js/main.js"></script>
   </body>
