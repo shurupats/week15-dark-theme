@@ -10,35 +10,79 @@
     <title>Форма регистрации</title>
   </head>
   <body class="container">
-    <form class="container-form">
+    <form class="container-form" name="registration_form">
       <h1 class="container-form__title">Регистрация</h1>
       <div class="container-form-field">
-        <label class="container-form-field__label">Имя</label>
-        <input class="container-form-field__firstname field" type="text" />
+        <label class="container-form-field__label" for="firstname">Имя</label>
+        <input
+          class="container-form-field__firstname field"
+          type="text"
+          name="firstname"
+          id="firstname"
+        />
       </div>
       <div class="container-form-field">
-        <label class="container-form-field__label">Фамилия</label>
-        <input class="container-form-field__lasttname field" type="text" />
+        <label class="container-form-field__label" for="secondname"
+          >Фамилия</label
+        >
+        <input
+          class="container-form-field__lasttname field"
+          type="text"
+          name="secondname"
+          id="secondname"
+        />
       </div>
       <div class="container-form-field">
-        <label class="container-form-field__label">Придумайте логин</label>
-        <input class="container-form-field__login field" type="text" />
+        <label class="container-form-field__label" for="login"
+          >Придумайте логин</label
+        >
+        <input
+          class="container-form-field__login field"
+          type="text"
+          name="login"
+          id="login"
+        />
       </div>
       <div class="container-form-field">
-        <label class="container-form-field__label">Придумайте пароль</label>
-        <input class="container-form-field__passwordfirst field" type="password" />
+        <label class="container-form-field__label" for="passwordfirst"
+          >Придумайте пароль</label
+        >
+        <input
+          class="container-form-field__passwordfirst field"
+          type="password"
+          name="passwordfirst"
+          if="passwordfirst"
+        />
       </div>
       <div class="container-form-field">
-        <label class="container-form-field__label">Повторите пароль</label>
-        <input class="container-form-field__passwordsecond field" type="password" />
+        <label class="container-form-field__label" for="passwordsecond"
+          >Повторите пароль</label
+        >
+        <input
+          class="container-form-field__passwordsecond field"
+          type="password"
+          name="passwordsecond"
+          id="passwordsecond"
+        />
       </div>
       <div class="container-form-field">
-        <label class="container-form-field__label"
+        <label class="container-form-field__label" for="phone"
           >Номер мобильного телефона</label
         >
-        <input class="container-form-field__login field" type="text" />
+        <input
+          class="container-form-field__phone field"
+          type="text"
+          name="phone"
+          id="phone"
+        />
       </div>
-      <button class="container-form__registration">Зарегистироваться</button>
+      <button
+        id="myButton"
+        class="container-form__registration"
+        onclick="register()"
+      >
+        Зарегистироваться
+      </button>
       <div class="container-form-agreement">
         <p class="container-form-agreement__text">
           Нажимая кнопку «Зарегистрироваться»:
@@ -47,25 +91,38 @@
           <input
             class="container-form-agreement-item__chexbox"
             type="checkbox"
+            name="agreement"
+            id="agreement"
           />
-          <label class="container-form-agreement-item__text"
-            >Я принимаю условия <a>Пользовательского соглашения</a> и даю своё согласие
-            Яндексу на обработку моей персональной информации на условиях,
-            определенных <a>Политикой конфиденциальности.</a></label
+          <label class="container-form-agreement-item__text" for="agreement"
+            >Я принимаю условия
+            <a class="link" href="https://yandex.ru/legal/rules/"
+              >Пользовательского соглашения</a
+            >
+            и даю своё согласие Яндексу на обработку моей персональной
+            информации на условиях, определенных
+            <a class="link" href="https://yandex.ru/legal/confidential/"
+              >Политикой конфиденциальности.</a
+            ></label
           >
         </div>
         <div class="container-form-agreement-item">
           <input
             class="container-form-agreement-item__chexbox"
             type="checkbox"
+            name="subscription"
+            id="subscription"
           />
-          <label class="container-form-agreement-item__text"
-            >Я не хочу получать рекламу и другие предложения данного сервиса Яндекса</label
+          <label class="container-form-agreement-item__text" for="subscription"
+            >Я не хочу получать рекламу и другие предложения данного сервиса
+            Яндекса</label
           >
         </div>
       </div>
     </form>
 
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
